@@ -1,0 +1,147 @@
+.title {
+  padding: 20px 0 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title__title {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.title__button {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 0;
+  width: 213px;
+  height: 48px;
+  border: none;
+  border-radius: 50px;
+  background-color: #3456F3;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.title__button:hover {
+  /* opacity: 0.5; */
+  background-color: #214ccf;
+}
+
+.title__tools {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 470px;
+}
+
+.title__slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.title__button-current {
+  background-color: inherit;
+  border: none;
+  /* display: flex; */
+  /* align-items: center; */
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  text-decoration: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  min-width: 130px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.title__button-current:hover {
+  /* opacity: 0.5; */
+  color: #3456F3;
+}
+
+
+.title__img {
+  background: inherit;
+  background-image: url(../../images/mnth-selector-icon.svg);
+  height: 24px;
+  width: 24px;
+  border: none;
+  outline: none;
+  display: block;
+  background-repeat: no-repeat;
+  float: right;
+  background-position: center;
+  margin: 0 0 0 8px;
+  padding: 0;
+}
+
+.title__img:hover {
+  background-image: url(../../images/mnth-selector-org.svg);
+}
+
+.title__button-arrow {
+  background: inherit;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  height: 24px;
+  width: 24px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.title__button-arrow:hover {
+  /* opacity: 0.5; */
+  color: #3456F3;
+}
+
+.title__button-arrow-left {
+  background-image: url(../../images/prev-month-icon.svg);
+  margin: 0 20px 0 0;
+}
+
+.title__button-arrow-left:hover {
+  background-image: url(../../images/prev-month-org.svg);
+}
+
+.title__button-arrow-right {
+  background-image: url(../../images/next-month-icon.svg);
+  margin: 0 0 0 20px;
+}
+
+.title__button-arrow-right:hover {
+  background-image: url(../../images/next-month-org.svg);
+}
+
+
+.title__button_type-report {
+  margin-left: auto;
+  background-color: #FFFFFF;
+  min-width: 125px;
+  border: solid 1px #E6E6E6;
+  color: #000000;
+}
+
+.title__button_type-report:hover {
+  background-color: #F5F5F5
+}

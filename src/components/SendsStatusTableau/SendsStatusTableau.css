@@ -1,0 +1,118 @@
+.tableau__table__wrapper {
+    width: 100%;
+    background-color: #FFFFFF;
+    border-spacing: 0;
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+    border: 1px solid #E6E6E6;
+    padding: 24px;
+    align-items: center;
+    text-align: center;
+}
+
+.tableau__table-column {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 4px;
+    padding: 0;
+    text-align: left;
+    width: 33%;
+}
+
+.tableau__table-column:nth-of-type(1) {
+    margin: 0;
+}
+
+.tableau__table-cell {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    margin-left: 4px;
+    padding: 0;
+    text-align: left;
+    width: 33%;
+    word-wrap: break-word
+}
+
+.tableau__table-cell:nth-of-type(1) {
+    margin: 0;
+}
+
+.tableau__table-body__wrapper {
+    display: inline-block;
+    max-height: 530px;
+    overflow-y: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.tableau__table-header__wrapper {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+.tableau__table-header__wrapper tr {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 40px;
+}
+
+.tableau__table-row__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.send-status {
+    grid-area: send-status;
+    height: 530px;
+}
+
+@media screen and (max-width: 1280px) {
+    .tableau__table__wrapper {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 1186px) {
+    .tableau__table-column {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .tableau__table-cell {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .tableau__table-column {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .tableau__table-cell {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .tableau__table__wrapper {
+        padding: 10px;
+    }
+}

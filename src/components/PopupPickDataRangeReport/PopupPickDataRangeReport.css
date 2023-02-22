@@ -1,0 +1,13 @@
+    .input_type-date-report {
+    width: 100%;
+    background-image: url(../../images/calendar.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    cursor: pointer;
+  }
+  
+  .input_type-date-report:hover {
+    background-image: url(../../images/calendar-org.svg);
+  }
+
+  

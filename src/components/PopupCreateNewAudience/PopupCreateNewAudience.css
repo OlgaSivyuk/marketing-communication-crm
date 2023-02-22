@@ -1,0 +1,113 @@
+/* ctyles for Multiselect */
+.multiselect-container {
+  /*  */
+}
+
+.multiSelectContainer .search-wrapper {
+  padding: 0;
+  border: none;
+}
+
+.multiSelectContainer .searchWrapper {
+  border: none;
+  border-radius: 0px;
+  height: 28px;
+  padding: 0;
+  border-bottom: 1px solid #D8D8D8;
+  position: relative;
+}
+
+.searchWrapper:hover {
+  border-bottom: 2px solid #3456F3;
+}
+
+.multiSelectContainer .searchBox {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 28px;
+  width: 100%;
+}
+
+.multiSelectContainer .chip {
+  background: none;
+  border-radius: 0px;
+  color: #000000;
+  display: inline-flex;
+  align-items: center;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 0;
+  margin-right: 0;
+  padding: 0;
+}
+
+.optionListContainer {
+  background: #fff;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-top: 20px;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+.optionListContainer .optionContainer {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: none;
+  box-shadow: 0px 28px 52px rgba(0, 0, 0, 0.16);
+}
+
+.optionContainer li {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  padding: 16px;
+}
+
+.optionContainer li:hover {
+  background: #F5F5F5;
+  color: #000000;
+}
+
+.optionContainer .selected {
+  background: #E6E6E6;
+  color: #000000;
+}
+
+.highlightOption {
+  background: none;
+  color: #000000;
+}
+
+.popup__form-input_error {
+  color: #D0021B;
+}
+
+.popup__form-input_error:focus-within {
+  border-bottom: 2px solid #D0021B;
+}
+
+.popup__error {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #D0021B;
+  margin: 3px 0 0;
+}

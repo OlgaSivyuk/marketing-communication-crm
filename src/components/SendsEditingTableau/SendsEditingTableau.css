@@ -1,0 +1,374 @@
+.tableau {
+  padding: 0 58px 58px 58px;
+}
+
+/* 344px */
+.tableau__grid-wrapper {
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  padding: 36px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) fit-content (30%);
+  grid-template-rows: 250px 340px 16px 48px;
+  row-gap: 42px;
+  column-gap: 24px;
+
+  grid-template-areas:
+    'send-info send-date . send-status'
+    'send-chanel-1 send-chanel-2 send-chanel-3 send-status'
+    '. . . send-status'
+    'button-area button-area button-area button-area'
+}
+
+.tableau__cell-wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+.send-info {
+  grid-area: send-info;
+}
+
+.send-date {
+  grid-area: send-date;
+}
+
+.send-status {
+  grid-area: send-status;
+  max-height: 530px;
+}
+
+.send-chanel-1 {
+  grid-area: send-chanel-1;
+}
+
+.send-chanel-2 {
+  grid-area: send-chanel-2;
+}
+
+.send-chanel-3 {
+  grid-area: send-chanel-3;
+}
+
+.button-area {
+  grid-area: button-area;
+}
+
+
+.tableau__cell_send-info {
+  /*  */
+}
+
+.tableau__cell-fields {
+  height: 44px;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  box-sizing: border-box;
+  margin: 0 0 8px 0;
+  padding: 0;
+}
+
+.tableau__cell-fields-date {
+  height: 64px;
+
+  border: 1px red solid;
+  box-sizing: border-box;
+  margin: 0 0 8px 0;
+  padding: 0;
+}
+
+.fields_type-changeble {
+  height: 64px;
+}
+
+.tableau__cell-title {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+  padding: 0;
+  margin: 0 0 8px 0;
+}
+
+.tableau__input-title {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #666666;
+  padding: 0;
+}
+
+.tableau__cell-input {
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 28px;
+  border-bottom: 1px solid #D8D8D8;
+  margin: 0;
+  padding: 0;
+}
+
+.tableau__cell-input:focus-within {
+  border-bottom: 2px solid #3456F3;
+}
+
+.tableau__cell-text {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 28px;
+  margin: 0 0 8px 0;
+  padding: 0;
+}
+
+.input_type-time {
+  width: 100%;
+}
+
+.input_type-time::-webkit-calendar-picker-indicator {
+  background-image: url(../../images/clock.svg);
+  cursor: pointer;
+}
+
+.input_type-time::-webkit-calendar-picker-indicator:hover {
+  background-image: url(../../images/clock-org.svg);
+}
+
+.input_type-date {
+  width: 100%;
+}
+
+.input_type-date::-webkit-calendar-picker-indicator {
+  background-image: url(../../images/calendar.svg);
+  cursor: pointer;
+}
+
+.input_type-date::-webkit-calendar-picker-indicator:hover {
+  background-image: url(../../images/calendar-org.svg);
+}
+
+.tableau__cell_buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tableau__button {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 0;
+  width: 213px;
+  height: 48px;
+  border: none;
+  border-radius: 50px;
+  background-color: #3456F3;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.tableau__button:hover {
+  /* opacity: 0.5; */
+  background-color: #214ccf;
+}
+
+.tableau__button_type-test {
+  background-color: #FFFFFF;
+  width: 160px;
+  border: solid 1px #E6E6E6;
+  color: #000000;
+}
+
+.tableau__button_type-test:hover {
+  background-color: #F5F5F5
+}
+
+.tableau__button_disabled {
+  cursor: default;
+  width: 160px;
+  background-color: #FFFFFF;
+  border: solid 1px #E6E6E6;
+  color: #E6E6E6;
+
+}
+
+.tableau__button_disabled:hover {
+  background-color: #FFFFFF;
+}
+
+.tableau__button_type-save {
+  margin-right: auto;
+  background-color: #FFFFFF;
+  min-width: 266px;
+  border: solid 1px #E6E6E6;
+  color: #000000;
+  padding: 12px 32px;
+}
+
+.tableau__button_type-save:hover {
+  background-color: #F5F5F5
+}
+
+.tableau__button_type-delete {
+  background-color: #FFFFFF;
+  width: 158px;
+  border: solid 1px #E6E6E6;
+  color: #000000;
+  margin: 0 0 0 16px;
+  padding: 12px 32px;
+}
+
+.tableau__button_type-delete:hover {
+  background-color: #F5F5F5
+}
+
+.button__img {
+  height: 24px;
+  width: 24px;
+  border: none;
+  outline: none;
+  display: block;
+  background-repeat: no-repeat;
+  float: left;
+  background-position: center;
+  padding: 0;
+}
+
+.button__img-edit {
+  background-image: url(../../images/edit.svg);
+}
+
+.button__img-delete {
+  background-image: url(../../images/delete.svg);
+}
+
+.tableau__cell-wrapper_column-name {
+  display: grid;
+  grid-template-columns: 40% 6.8% 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 2.7%;
+  margin-bottom: 16px;
+}
+
+.tableau__cell-wrapper_status-data {
+  display: grid;
+  grid-template-columns: 40% 6.8% 1fr 1fr;
+  grid-template-rows: repeat(10, 1fr);
+  gap: 2.7%;
+}
+
+.tableau__column-text {
+  height: 24px;
+  display: flex;
+  align-items: flex-start;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.tableau__column-text_open-more {
+  align-items: flex-end;
+  justify-content: center;
+  color: #0055BB;
+  cursor: pointer;
+}
+
+.tableau__column-text_open-more:hover {
+  color: #3456F3;
+}
+
+@media screen and (max-width: 1186px) {
+  .tableau__grid-wrapper {
+    grid-template-columns: 20% 20% 20% 30%;
+    column-gap: 2.7%;
+  }
+
+  .tableau__cell-title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .tableau__input-title {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .tableau__cell-input {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .tableau__cell-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .tableau__column-text {
+    font-size: 12px;
+    line-height: 14px;
+    border: 1px red solid;
+  }
+
+  .tableau__button {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+
+  .tableau__grid-wrapper {
+    grid-template-columns: 22% 22% 22% 28%;
+    column-gap: 2.2%;
+  }
+
+  .tableau__cell-text {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .tableau__button {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .tableau__button_type-test {
+    width: 120px;
+  }
+
+  .tableau__button_disabled {
+    width: 120px;
+  }
+
+  .tableau__button_type-save {
+    min-width: 200px;
+    margin: 0 16px 0 0;
+  }
+
+  .button__img {
+    height: 14px;
+    width: 14px;
+    background-size: cover;
+  }
+
+  .tableau__column-text {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+}

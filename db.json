@@ -1,0 +1,917 @@
+{
+  "audiences": [
+    {
+      "id": 1,
+      "name": "Название 1",
+      "date_of_creation": "20.10.2022",
+      "date_of_update": "21.10.2022",
+      "value": 10000,
+      "deep": "Глубина",
+      "categorys": [
+        {
+          "category": "Категория 1",
+          "id": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Название 2",
+      "date_of_creation": "20.10.2022",
+      "date_of_update": "21.10.2022",
+      "value": 10000,
+      "deep": "Глубина",
+      "categorys": [
+        {
+          "category": "Категория 1",
+          "id": 1
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Название 3",
+      "date_of_creation": "20.10.2022",
+      "date_of_update": "21.10.2022",
+      "value": 10000,
+      "deep": "Глубина",
+      "categorys": [
+        {
+          "category": "Категория 1",
+          "id": 1
+        }
+      ]
+    },
+    {
+      "name": "новая",
+      "date_of_creation": "1669134232",
+      "date_of_update": "1669134232",
+      "value": "",
+      "deep": "1000",
+      "categorys": [
+        {
+          "category": "Категория 1",
+          "id": 1
+        }
+      ],
+      "date": "1669134155",
+      "id": 6
+    },
+    {
+      "name": "новая",
+      "date_of_creation": "1669134660",
+      "date_of_update": "1669134660",
+      "value": "",
+      "deep": "234",
+      "categorys": [
+        {
+          "category": "Категория 1",
+          "id": 1
+        }
+      ],
+      "id": 7
+    },
+    {
+      "name": "проверка",
+      "date": "1669906097",
+      "date_of_update": "1669906097",
+      "value": "",
+      "deep": "10000",
+      "categorys": [
+        {
+          "category": "Категория 1",
+          "id": 1
+        }
+      ],
+      "id": 11
+    },
+    {
+      "name": "проверка",
+      "date": "1669906097",
+      "date_of_update": "1669906097",
+      "value": "",
+      "deep": "10000",
+      "categorys": [
+        {
+          "category": "Категория 2",
+          "id": 1
+        },
+        {
+          "category": "Категория 3",
+          "id": 2
+        }
+      ],
+      "id": 12
+    },
+    {
+      "name": "10",
+      "date": "1670151096",
+      "date_of_update": "1670151097",
+      "value": "",
+      "deep": "10",
+      "categorys": [
+        {
+          "category": "Категория 1",
+          "id": 1
+        },
+        {
+          "category": "Категория 2",
+          "id": 2
+        }
+      ],
+      "id": 13
+    }
+  ],
+  "events": [
+    {
+      "name": "тестирование кнопок 1",
+      "date": "1669386660",
+      "time": "1669386667",
+      "audience": [
+        {
+          "audienceName": "Название 1"
+        },
+        {
+          "audienceName": "Название 3"
+        },
+        {
+          "audienceName": "Название 2"
+        }
+      ],
+      "canal": [
+        {
+          "canal": "Android Push",
+          "id": 1
+        }
+      ],
+      "finalValue": "",
+      "value": "",
+      "id": 1,
+      "deeplinkAndroid": "добавляем ссылку"
+    },
+    {
+      "name": "тест ",
+      "date": "1669236780",
+      "time": "1669387996",
+      "audience": [
+        {
+          "audienceName": "Название 1"
+        }
+      ],
+      "canal": [
+        {
+          "canal": "Android Push",
+          "id": 1
+        },
+        {
+          "canal": "iOs Push",
+          "id": 2
+        },
+        {
+          "canal": "Email",
+          "id": 3
+        }
+      ],
+      "finalValue": "",
+      "value": "",
+      "id": 2,
+      "deeplinkAndroid": "добавляем ссылку",
+      "deeplinkIos": "111",
+      "textAndroid": "",
+      "textIos": "и текст меняем",
+      "textEmail": "780",
+      "linkEmail": "link"
+    },
+    {
+      "name": "andr email",
+      "date": "1669402740",
+      "time": "1669388350",
+      "audience": [
+        {
+          "audienceName": "Название 1"
+        },
+        {
+          "audienceName": "Название 2"
+        }
+      ],
+      "canal": [
+        {
+          "canal": "Android Push",
+          "id": 1
+        },
+        {
+          "canal": "Email",
+          "id": 3
+        }
+      ],
+      "finalValue": "",
+      "value": "",
+      "id": 3,
+      "deeplinkAndroid": "диплинк Android Push",
+      "text": "и текст Android Push",
+      "deeplinkIos": "диплинк iOs Push",
+      "textIos": "и текст новыйiOs Push",
+      "linkEmail": "ссылка",
+      "textAndroid": "text",
+      "textEmail": "7567800---"
+    },
+    {
+      "name": "today",
+      "date": "1670667960",
+      "time": "1669620096",
+      "audience": [
+        {
+          "audienceName": "Название 2"
+        },
+        {
+          "audienceName": "Название 1"
+        },
+        {
+          "audienceName": "Название 3"
+        }
+      ],
+      "canal": [
+        {
+          "canal": "iOs Push",
+          "id": 2
+        },
+        {
+          "canal": "Email",
+          "id": 3
+        }
+      ],
+      "finalValue": "",
+      "value": "",
+      "id": 4,
+      "deeplinkAndroid": "добзждажывлпдыавляем ссылкыу",
+      "textAndroid": "и текст",
+      "deeplinkIos": "123ы",
+      "textIos": "textmnmnjn",
+      "linkEmail": "123ы",
+      "textEmail": "780"
+    },
+    {
+      "name": "12",
+      "date": "1671197220",
+      "time": "1670506073",
+      "audience": [
+        {
+          "audienceName": "Название 1"
+        },
+        {
+          "audienceName": "Название 2"
+        }
+      ],
+      "canal": [
+        {
+          "canal": "iOs Push",
+          "id": 2
+        },
+        {
+          "canal": "Android Push",
+          "id": 1
+        }
+      ],
+      "finalValue": "",
+      "value": "",
+      "id": 5
+    },
+    {
+      "name": "123",
+      "date": "1670680620",
+      "time": "1670594081",
+      "audience": [
+        {
+          "audienceName": "Название 1"
+        },
+        {
+          "audienceName": "Название 2"
+        },
+        {
+          "audienceName": "Название 3"
+        },
+        {
+          "audienceName": "новая"
+        }
+      ],
+      "canal": [
+        {
+          "canal": "Android Push",
+          "id": 1
+        },
+        {
+          "canal": "iOs Push",
+          "id": 2
+        }
+      ],
+      "finalValue": "",
+      "value": "",
+      "id": 6
+    },
+    {
+      "name": "123",
+      "date": "1670680680",
+      "time": "1670594283",
+      "audience": [
+        {
+          "audienceName": "Название 2"
+        },
+        {
+          "audienceName": "Название 3"
+        },
+        {
+          "audienceName": "новая"
+        },
+        {
+          "audienceName": "проверка"
+        }
+      ],
+      "canal": [
+        {
+          "canal": "Android Push",
+          "id": 1
+        },
+        {
+          "canal": "iOs Push",
+          "id": 2
+        }
+      ],
+      "finalValue": "",
+      "value": "",
+      "id": 7
+    },
+    {
+      "name": "123",
+      "date": "1670680680",
+      "time": "1670594304",
+      "audience": [],
+      "canal": [
+        {
+          "canal": "Android Push",
+          "id": 1
+        }
+      ],
+      "finalValue": "",
+      "value": "",
+      "id": 8
+    }
+  ],
+  "report": [
+    {
+      "startDate": "2022-11-15T14:25:30.519Z",
+      "endDate": "2022-11-15T14:25:30.519Z",
+      "id": 5
+    },
+    {
+      "startDate": "2022-11-17T11:55:45.348Z",
+      "endDate": "2022-11-17T11:55:45.348Z",
+      "id": 6
+    },
+    {
+      "startDate": "2022-11-18T12:03:55.166Z",
+      "endDate": "2022-11-18T12:03:55.166Z",
+      "id": 7
+    },
+    {
+      "startDate": "2022-11-21T06:49:43.032Z",
+      "endDate": "2022-11-21T06:49:43.032Z",
+      "id": 8
+    },
+    {
+      "startDate": "2022-11-21T06:50:48.568Z",
+      "endDate": "2022-11-21T06:50:48.568Z",
+      "id": 9
+    },
+    {
+      "startDate": "2022-11-21T07:45:12.530Z",
+      "endDate": "2022-11-21T07:45:12.530Z",
+      "id": 10
+    },
+    {
+      "startDate": "2022-11-26T10:53:39.648Z",
+      "endDate": "2022-11-26T10:53:39.648Z",
+      "id": 11
+    },
+    {
+      "startDate": "2022-12-09T14:13:27.998Z",
+      "endDate": "2022-12-09T14:13:27.998Z",
+      "id": 12
+    },
+    {
+      "startDate": "2022-12-09T14:13:27.998Z",
+      "endDate": "2022-12-09T14:13:27.998Z",
+      "id": 13
+    }
+  ],
+  "currentreport": [
+    {
+      "id": 82,
+      "date": "2022-11-10 20:10"
+    },
+    {
+      "id": 91,
+      "date": "2022-11-05 18:12"
+    },
+    {
+      "id": 90,
+      "date": "2022-11-17 14:08"
+    },
+    {
+      "id": 100,
+      "date": "2022-11-03 12:16"
+    }
+  ],
+  "settings": [
+    {
+      "policy": "2",
+      "timeStart": "09:00",
+      "timeEnd": "21:00",
+      "id": 2,
+      "canalName": "Android push"
+    },
+    {
+      "policy": "3",
+      "timeStart": "11:00",
+      "timeEnd": "22:00",
+      "id": 3,
+      "canalName": "iOs push"
+    },
+    {
+      "policy": "1",
+      "timeStart": "12:03",
+      "timeEnd": "23:00",
+      "id": 1,
+      "canalName": "Email"
+    }
+  ],
+  "send": [
+    {
+      "id": 103,
+      "date": "2022-11-23 01:56"
+    },
+    {
+      "id": 107,
+      "date": "2022-11-12 20:07"
+    },
+    {
+      "id": 3,
+      "date": "2022-11-30 20:59"
+    },
+    {
+      "id": 2,
+      "date": "2022-11-26 20:53"
+    }
+  ],
+  "stop": [
+    {
+      "id": 103,
+      "date": "2022-11-23 01:56"
+    },
+    {
+      "id": 107,
+      "date": "2022-11-12 20:07"
+    },
+    {
+      "id": 3,
+      "date": "2022-11-30 20:59"
+    },
+    {
+      "id": 2,
+      "date": "2022-11-26 20:53"
+    }
+  ],
+  "test": [
+    {
+      "event": {
+        "name": "тест ",
+        "date": "1669481580",
+        "time": "1669387996",
+        "audience": [
+          {
+            "audienceName": "Название 1"
+          }
+        ],
+        "canal": [
+          {
+            "canal": "Android Push",
+            "id": 1
+          },
+          {
+            "canal": "iOs Push",
+            "id": 2
+          },
+          {
+            "canal": "Email",
+            "id": 3
+          }
+        ],
+        "finalValue": "",
+        "value": "",
+        "id": 2
+      },
+      "contact": {
+        "name": "+79100135342"
+      },
+      "id": 5
+    },
+    {
+      "event": {
+        "name": "тест ",
+        "date": "1669481580",
+        "time": "1669387996",
+        "audience": [
+          {
+            "audienceName": "Название 1"
+          }
+        ],
+        "canal": [
+          {
+            "canal": "Android Push",
+            "id": 1
+          },
+          {
+            "canal": "iOs Push",
+            "id": 2
+          },
+          {
+            "canal": "Email",
+            "id": 3
+          }
+        ],
+        "finalValue": "",
+        "value": "",
+        "id": 2
+      },
+      "contact": {
+        "phone": "89100135342"
+      },
+      "id": 6
+    },
+    {
+      "event": {
+        "name": "andr email",
+        "date": "1669827540",
+        "time": "1669388350",
+        "audience": [
+          {
+            "audienceName": "Название 1"
+          },
+          {
+            "audienceName": "Название 2"
+          }
+        ],
+        "canal": [
+          {
+            "canal": "Android Push",
+            "id": 1
+          },
+          {
+            "canal": "Email",
+            "id": 3
+          }
+        ],
+        "finalValue": "",
+        "value": "",
+        "id": 3,
+        "deeplinkAndroid": "диплинк Android Push",
+        "text": "и текст Android Push",
+        "deeplinkIos": "диплинк iOs Push",
+        "textIos": "и текст iOs Push",
+        "linkEmail": ""
+      },
+      "contact": {
+        "email": "olchik0308@ya.ru"
+      },
+      "id": 7
+    },
+    {
+      "event": {
+        "name": "тест ",
+        "date": "1669481580",
+        "time": "1669387996",
+        "audience": [
+          {
+            "audienceName": "Название 1"
+          }
+        ],
+        "canal": [
+          {
+            "canal": "Android Push",
+            "id": 1
+          },
+          {
+            "canal": "iOs Push",
+            "id": 2
+          },
+          {
+            "canal": "Email",
+            "id": 3
+          }
+        ],
+        "finalValue": "",
+        "value": "",
+        "id": 2
+      },
+      "contact": {
+        "email": "qwe@tyu.yu"
+      },
+      "id": 8
+    },
+    {
+      "event": {
+        "name": "тест ",
+        "date": "1669481580",
+        "time": "1669387996",
+        "audience": [
+          {
+            "audienceName": "Название 1"
+          }
+        ],
+        "canal": [
+          {
+            "canal": "Android Push",
+            "id": 1
+          },
+          {
+            "canal": "iOs Push",
+            "id": 2
+          },
+          {
+            "canal": "Email",
+            "id": 3
+          }
+        ],
+        "finalValue": "",
+        "value": "",
+        "id": 2
+      },
+      "contact": {
+        "email": "test@test.ru"
+      },
+      "id": 9
+    },
+    {
+      "event": {
+        "name": "тест ",
+        "date": "1669481580",
+        "time": "1669387996",
+        "audience": [
+          {
+            "audienceName": "Название 1"
+          }
+        ],
+        "canal": [
+          {
+            "canal": "Android Push",
+            "id": 1
+          },
+          {
+            "canal": "iOs Push",
+            "id": 2
+          },
+          {
+            "canal": "Email",
+            "id": 3
+          }
+        ],
+        "finalValue": "",
+        "value": "",
+        "id": 2
+      },
+      "contact": {
+        "email": "test@test.ru"
+      },
+      "id": 10
+    },
+    {
+      "event": {
+        "name": "тест ",
+        "date": "1669481580",
+        "time": "1669387996",
+        "audience": [
+          {
+            "audienceName": "Название 1"
+          }
+        ],
+        "canal": [
+          {
+            "canal": "Android Push",
+            "id": 1
+          },
+          {
+            "canal": "iOs Push",
+            "id": 2
+          },
+          {
+            "canal": "Email",
+            "id": 3
+          }
+        ],
+        "finalValue": "",
+        "value": "",
+        "id": 2,
+        "deeplinkAndroid": "добавляем ссылку",
+        "deeplinkIos": "123",
+        "textAndroid": "textmnmnjn",
+        "textIos": "и текст",
+        "textEmail": "78"
+      },
+      "contact": {
+        "phone": "+79100135342"
+      },
+      "id": 11
+    },
+    {
+      "event": {
+        "name": "тест ",
+        "date": "1669481580",
+        "time": "1669387996",
+        "audience": [
+          {
+            "audienceName": "Название 1"
+          }
+        ],
+        "canal": [
+          {
+            "canal": "Android Push",
+            "id": 1
+          },
+          {
+            "canal": "iOs Push",
+            "id": 2
+          },
+          {
+            "canal": "Email",
+            "id": 3
+          }
+        ],
+        "finalValue": "",
+        "value": "",
+        "id": 2,
+        "deeplinkAndroid": "добавляем ссылку",
+        "deeplinkIos": "123",
+        "textAndroid": "textmnmnjn",
+        "textIos": "и текст",
+        "textEmail": "78"
+      },
+      "contact": {
+        "email": "olchik0308@ya.ru"
+      },
+      "id": 12
+    },
+    {
+      "event": {
+        "name": "today",
+        "date": "1669631160",
+        "time": "1669620096",
+        "audience": [
+          {
+            "audienceName": "Название 2"
+          },
+          {
+            "audienceName": "Название 1"
+          },
+          {
+            "audienceName": "Название 3"
+          }
+        ],
+        "canal": [
+          {
+            "canal": "iOs Push",
+            "id": 2
+          },
+          {
+            "canal": "Email",
+            "id": 3
+          }
+        ],
+        "finalValue": "",
+        "value": "",
+        "id": 4
+      },
+      "contact": {
+        "phone": "79100135342"
+      },
+      "id": 13
+    },
+    {
+      "event": {
+        "name": "тест ",
+        "date": "1669481580",
+        "time": "1669387996",
+        "audience": [
+          {
+            "audienceName": "Название 1"
+          }
+        ],
+        "canal": [
+          {
+            "canal": "Android Push",
+            "id": 1
+          },
+          {
+            "canal": "iOs Push",
+            "id": 2
+          },
+          {
+            "canal": "Email",
+            "id": 3
+          }
+        ],
+        "finalValue": "",
+        "value": "",
+        "id": 2,
+        "deeplinkAndroid": "добавляем ссылку",
+        "deeplinkIos": "123",
+        "textAndroid": "textmnmnjn",
+        "textIos": "и текст меняем",
+        "textEmail": "780",
+        "linkEmail": "link"
+      },
+      "contact": {
+        "email": "tryeyr@lk.ru"
+      },
+      "id": 14
+    },
+    {
+      "event": {
+        "name": "тест ",
+        "date": "1669481580",
+        "time": "1669387996",
+        "audience": [
+          {
+            "audienceName": "Название 1"
+          }
+        ],
+        "canal": [
+          {
+            "canal": "Android Push",
+            "id": 1
+          },
+          {
+            "canal": "iOs Push",
+            "id": 2
+          },
+          {
+            "canal": "Email",
+            "id": 3
+          }
+        ],
+        "finalValue": "",
+        "value": "",
+        "id": 2,
+        "deeplinkAndroid": "добавляем ссылку",
+        "deeplinkIos": "111",
+        "textAndroid": "textmnmnjn",
+        "textIos": "и текст меняем",
+        "textEmail": "780",
+        "linkEmail": "link"
+      },
+      "contact": {
+        "phone": "89100135342"
+      },
+      "id": 15
+    },
+    {
+      "event": {
+        "name": "today",
+        "date": "1670667960",
+        "time": "1669620096",
+        "audience": [
+          {
+            "audienceName": "Название 2"
+          },
+          {
+            "audienceName": "Название 1"
+          },
+          {
+            "audienceName": "Название 3"
+          }
+        ],
+        "canal": [
+          {
+            "canal": "iOs Push",
+            "id": 2
+          },
+          {
+            "canal": "Email",
+            "id": 3
+          }
+        ],
+        "finalValue": "",
+        "value": "",
+        "id": 4,
+        "deeplinkAndroid": "добзждажывлпдыавляем ссылкыу",
+        "textAndroid": "и текст",
+        "deeplinkIos": "123ы",
+        "textIos": "textmnmnjn",
+        "linkEmail": "123ы",
+        "textEmail": "780"
+      },
+      "contact": {
+        "phone": "89000000000"
+      },
+      "id": 16
+    }
+  ]
+}

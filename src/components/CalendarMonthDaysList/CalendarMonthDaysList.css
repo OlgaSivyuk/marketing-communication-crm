@@ -1,0 +1,7 @@
+.calender__grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: minmax(6%, 12.9%)/repeat(6, 1fr);
+    column-gap: 1.3%;
+    row-gap: 20px;
+}

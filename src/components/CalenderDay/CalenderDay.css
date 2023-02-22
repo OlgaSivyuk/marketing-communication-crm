@@ -1,0 +1,67 @@
+.callender__cell-wrapper_prev-month {
+    background-color: #E6E6E6;
+}
+
+.callender__cell-row {
+    height: 32px;
+    padding: 0 8px;
+
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.current-day {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 32px;
+    padding: 0 8px;
+    border-radius: 10px;
+}
+
+.callender__cell-row:hover {
+    background-color: #F5F5F5;
+}
+
+.current-day:hover {
+    background-color: inherit;
+}
+
+.callender__day-wrapper {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 24px;
+    width: 24px;
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.callender__day-wrapper_current-day {
+    color: #3456F3;
+}
+
+.callender__event-list-wrapper {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: inherit;
+}
+
+.callender__event-list-wrapper_shadow {
+    box-shadow: 0px 20px 24px rgba(0, 0, 0, 0.16);
+    width: 100%;
+    position: absolute;
+    z-index: 99;
+}

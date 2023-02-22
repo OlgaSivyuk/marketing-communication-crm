@@ -1,0 +1,27 @@
+.settings__cell-wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+.settings__cell_send-chanel {
+    /*  */
+}
+
+.settings__cell-title {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    padding: 0;
+    margin: 0 0 8px 0;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .settings__cell-title {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+}

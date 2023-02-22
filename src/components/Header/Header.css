@@ -1,0 +1,116 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 20px 58px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.header__logo {
+    width: 37px;
+    height: 40px;
+    margin: 0;
+}
+
+.header__navigation {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header__navigation-link {
+    margin: 0 36px 0 0;
+    padding: 0;
+}
+
+.header__navigation-link:nth-last-of-type(1) {
+    margin-right: 0;
+}
+
+.header__button-link {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    background-color: #FFFFFF;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.header__button-link:hover {
+    /* opacity: 0.5; */
+    color: #3456F3;
+}
+
+.header__img {
+    background: #FFFFFF;
+    height: 24px;
+    width: 24px;
+    border: none;
+    outline: none;
+    display: block;
+    background-repeat: no-repeat;
+    float: right;
+    background-position: center;
+    margin: 0 8px 0 0;
+    padding: 0;
+}
+
+.header__img-sends {
+    background-image: url(../../images/calendar.svg);
+}
+
+.header__img-sends:hover {
+    background-image: url(../../images/calendar-org.svg);
+}
+
+.header__img-audience {
+    background-image: url(../../images/user.svg);
+}
+
+.header__img-audience:hover {
+    background-image: url(../../images/user-org.svg);
+}
+
+.header__img-settings {
+    background-image: url(../../images/settings.svg);
+}
+
+.header__img-settings:hover {
+    background-image: url(../../images/settings-org.svg);
+}
+
+.header__img-report {
+    background-image: url(../../images/list.svg);
+}
+
+.header__img-report:hover {
+    background-image: url(../../images/list-org.svg);
+}
+
+@media screen and (max-width: 900px) {
+
+    .header__button-link {
+
+        font-size: 14px;
+        line-height: 16px;
+
+    }
+
+    .header__img {
+        height: 16px;
+        width: 16px;
+        background-size: cover;
+    }
+
+}
