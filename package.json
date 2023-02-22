@@ -1,8 +1,8 @@
 {
+  "homepage": "http://OlgaSivyuk.github.io/marketing-communication-crm",
   "name": "marketing-communication-crm",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://olgasivyuk.github.io/marketing-communication-crm",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -21,12 +21,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build && cp build/index.html build/404.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "server": "json-server db.json --watch --port 3004"
   },
   "eslintConfig": {
