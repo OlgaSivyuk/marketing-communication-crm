@@ -1,34 +1,6 @@
 {
   "audiences": [
     {
-      "id": 1,
-      "name": "Название 1",
-      "date_of_creation": "20.10.2022",
-      "date_of_update": "21.10.2022",
-      "value": 10000,
-      "deep": "Глубина",
-      "categorys": [
-        {
-          "category": "Категория 1",
-          "id": 1
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "name": "Название 2",
-      "date_of_creation": "20.10.2022",
-      "date_of_update": "21.10.2022",
-      "value": 10000,
-      "deep": "Глубина",
-      "categorys": [
-        {
-          "category": "Категория 1",
-          "id": 1
-        }
-      ]
-    },
-    {
       "id": 3,
       "name": "Название 3",
       "date_of_creation": "20.10.2022",
@@ -354,6 +326,39 @@
       "finalValue": "",
       "value": "",
       "id": 8
+    },
+    {
+      "name": "123",
+      "date": "1677232980",
+      "time": "1677146595",
+      "audience": [
+        {
+          "audienceName": "Название 2"
+        },
+        {
+          "audienceName": "Название 1"
+        },
+        {
+          "audienceName": "10"
+        }
+      ],
+      "canal": [
+        {
+          "canal": "iOs Push",
+          "id": 3
+        },
+        {
+          "canal": "Android Push",
+          "id": 2
+        },
+        {
+          "canal": "Email",
+          "id": 1
+        }
+      ],
+      "finalValue": "",
+      "value": "",
+      "id": 9
     }
   ],
   "report": [
@@ -912,6 +917,47 @@
         "phone": "89000000000"
       },
       "id": 16
+    },
+    {
+      "event": {
+        "name": "today",
+        "date": "1677147095",
+        "time": "1677147095",
+        "audience": [
+          {
+            "audienceName": "Название 2"
+          },
+          {
+            "audienceName": "Название 1"
+          },
+          {
+            "audienceName": "Название 3"
+          }
+        ],
+        "canal": [
+          {
+            "canal": "iOs Push",
+            "id": 2
+          },
+          {
+            "canal": "Email",
+            "id": 3
+          }
+        ],
+        "finalValue": "",
+        "value": "",
+        "id": 4,
+        "deeplinkAndroid": "добзждажывлпдыавляем ссылкыу",
+        "textAndroid": "и текст",
+        "deeplinkIos": "123ы",
+        "textIos": "textmnmnjn",
+        "linkEmail": "123ы",
+        "textEmail": "780"
+      },
+      "contact": {
+        "phone": "89000000000"
+      },
+      "id": 17
     }
   ]
 }
