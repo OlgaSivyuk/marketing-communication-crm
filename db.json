@@ -92,6 +92,60 @@
         }
       ],
       "id": 13
+    },
+    {
+      "name": "проверка",
+      "date": "1677152089",
+      "date_of_update": "1677152090",
+      "value": "",
+      "deep": "12",
+      "categorys": [
+        {
+          "category": "Категория 1",
+          "id": 1
+        },
+        {
+          "category": "Категория 2",
+          "id": 2
+        },
+        {
+          "category": "Категория 3",
+          "id": 3
+        }
+      ],
+      "id": 14
+    },
+    {
+      "name": "123",
+      "date": "1677152883",
+      "date_of_update": "1677152885",
+      "value": "",
+      "deep": "12",
+      "categorys": [
+        {
+          "category": "Категория 2",
+          "id": 2
+        }
+      ],
+      "id": 15
+    },
+    {
+      "name": "1",
+      "date": "1677242312",
+      "date_of_update": "1677242915",
+      "value": "",
+      "deep": "",
+      "categorys": [
+        {
+          "category": "Категория 1",
+          "id": 1
+        },
+        {
+          "category": "Категория 2",
+          "id": 2
+        }
+      ],
+      "id": 16
     }
   ],
   "events": [
@@ -359,6 +413,36 @@
       "finalValue": "",
       "value": "",
       "id": 9
+    },
+    {
+      "name": "123",
+      "date": "1677060600",
+      "time": "1677147038",
+      "audience": [
+        {
+          "audienceName": "10"
+        },
+        {
+          "audienceName": "Название 3"
+        }
+      ],
+      "canal": [
+        {
+          "canal": "iOs Push",
+          "id": 3
+        },
+        {
+          "canal": "Email",
+          "id": 1
+        },
+        {
+          "canal": "Android Push",
+          "id": 2
+        }
+      ],
+      "finalValue": "",
+      "value": "",
+      "id": 10
     }
   ],
   "report": [
@@ -429,7 +513,7 @@
   "settings": [
     {
       "policy": "2",
-      "timeStart": "09:00",
+      "timeStart": "13:00",
       "timeEnd": "21:00",
       "id": 2,
       "canalName": "Android push"

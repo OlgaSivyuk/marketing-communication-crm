@@ -11,8 +11,20 @@ function PopupWithForm({
   children, 
   onClose, 
   isOpen, 
-  onSubmit
+  onSubmit,
+  resetSelectFieldCategory,
+  resetSelectFieldCanal,
+  resetSelectFieldAudience,
+  reset
 }) {
+
+  function closePopup(){
+    onClose();
+    reset();
+    resetSelectFieldCategory();
+    resetSelectFieldCanal();
+    resetSelectFieldAudience();
+  }
   
   return (
     <div
@@ -46,7 +58,7 @@ function PopupWithForm({
           type='button'
           className='popup__close-popup'
           aria-label='Закрыть'
-          onClick={onClose}
+          onClick={closePopup}
         ></button>
       </div>
     </div>

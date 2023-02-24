@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { Multiselect } from 'multiselect-react-dropdown'
 import PopupWithForm from '../PopupWithForm/PopupWithForm';
@@ -8,6 +8,11 @@ import { dataCategory } from '../../utils/constants'
 function PopupCreateNewAudience ({ isOpen, onClose, createAudience, changeAudienceHandler, onChangeCategory }){
 
 const [options] = useState(dataCategory);
+const multiselectRefCategory = useRef();
+
+const [isSubmitted, setIsSubmitted] = useState(false);
+const [isCategorySelected, setIsCategorySelected] = useState(false);
+const [showCategoryError, setShowCategoryError] = useState(false);
 
 const {
   register,
@@ -20,114 +25,115 @@ const {
   mode: 'all',
   defaultValues: {
     name: '',
-    deep: '',
     category: '',
     selectfieldcategory: ''
   },
 });
 
+function resetSelectFieldCategory() {
+  multiselectRefCategory.current.resetSelectedValues();
+};
+
+function onSelect(selected) {
+  onChangeCategory(selected);
+  setValue('category', selected);
+  setIsCategorySelected(true);
+};
+
+function onRemove(selected) {
+  setValue('category', selected);
+  setIsCategorySelected(multiselectRefCategory.current.getSelectedItems().length > 0);
+};
+
+
 function onSubmit(data) {
+  if (!isCategorySelected && !multiselectRefCategory.current.getSelectedItems().length > 0) {
+    setIsSubmitted(true);
+    errors.category = 'Поле не может быть пустым';
+    return;
+  } else {
+    setIsSubmitted(false);
+  };
+  setIsCategorySelected(multiselectRefCategory.current.getSelectedItems().length > 0);
+  errors.category = undefined;
   createAudience(data);
-  reset()
-}
+  resetSelectFieldCategory();
+  reset();
+};
+
+function onCategoryBlur() {
+  setShowCategoryError(multiselectRefCategory.current.getSelectedItems().length === 0 && errors.category);
+};
 
     return (
-        <PopupWithForm
-          name='new-audience'
-          title='Добавить аудиторию'
-          id='new-audience'
-          formName='new-audience'
-          buttonTextConfirm='Добавить аудиторию'
-          onSubmit={handleSubmit(onSubmit)}
-          isOpen={isOpen}
-          onClose={onClose}
-        >
-          <fieldset className='popup__form-fields'>
-            <label className='popup__form-title'></label>
-            <input
-            {...register('name', {
-              required: 'Поле не может быть пустым',
+      <PopupWithForm
+        name="new-audience"
+        title="Добавить аудиторию"
+        id="new-audience"
+        formName="new-audience"
+        buttonTextConfirm="Добавить аудиторию"
+        onSubmit={handleSubmit(onSubmit)}
+        isOpen={isOpen}
+        onClose={onClose}
+        reset={reset}
+        resetSelectFieldCategory={resetSelectFieldCategory}
+      >
+        <fieldset className="popup__form-fields">
+          <label className="popup__form-title"></label>
+          <input
+            {...register("name", {
+              required: "Поле не может быть пустым",
             })}
-              placeholder='Название аудитории'
-              className={`popup__form-input ${
-                errors?.name ? 'popup__form-input_error' : ''
-              }`}
-              type='text'
-              id='new-audience'
-              name='name'
-              // value={valueAudience.name}
-              onChange={e => changeAudienceHandler(e.target.value, 'name')}
-            ></input>
-            {errors?.name && (
-            <span className='popup__error' type='text'>
+            placeholder="Название аудитории"
+            className={`popup__form-input ${
+              errors?.name ? "popup__form-input_error" : ""
+            }`}
+            type="text"
+            id="new-audience"
+            name="name"
+            // value={valueAudience.name}
+            onChange={(e) => changeAudienceHandler(e.target.value, "name")}
+          ></input>
+          {errors?.name && (
+            <span className="popup__error" type="text">
               {errors?.name?.message}
             </span>
           )}
-          </fieldset>
-          
-          <fieldset className='popup__form-fields'>
-            <label className='popup__form-title'></label>
-            <input
-            {...register('deep', {
-              required: 'Поле не может быть пустым',
-            })}
-              placeholder='Глубина'
-              className={`popup__form-input ${
-                errors?.deep ? 'popup__form-input_error' : ''
-              }`}
-              type='text'
-              id='deep'
-              name='deep'
-              // value={valueAudience.name}
-              onChange={e => changeAudienceHandler(e.target.value, 'deep')}
-            ></input>
-            {errors?.deep && (
-            <span className='popup__error' type='text'>
-              {errors?.deep?.message}
-            </span>
-          )}
-          </fieldset>
+        </fieldset>
 
-          <fieldset className='popup__form-fields'>
-          <label className='popup__form-title'></label>
-            <Controller
-            name='selectfieldcategory'
+        <fieldset className="popup__form-fields">
+          <label className="popup__form-title"></label>
+          <Controller
+            name="category"
             control={control}
-            rules={{ required: true }}
-            errors='Поле «Категория» не может быть пустым'
-            render={({ field: { ref, ...field }}) => {
-            //  console.log(' {console.log(field)}', ref);
+            rules={{ required: "Поле не может быть пустым" }}
+            errors={errors.category}
+            render={({ field: { ref, ...field } }) => {
               return (
                 <Multiselect
                   {...field}
                   inputRef={ref}
-                  displayValue='category'
-                  onSelect={(selected) => {
-                    console.log('выбран вариант', selected);
-                    onChangeCategory(selected)}}
-                  onRemove={(selected) => {
-                    console.log('удален вариант', selected );
-                    setValue('selectfieldcategory', selected);
-                    // onChangeCategory(selected);
-                  }}
+                  ref={multiselectRefCategory}
+                  displayValue="category"
+                  onSelect={onSelect}
+                  onRemove={onRemove}
                   options={options}
-                  showCheckbox='true'
-                  hidePlaceholder='true'
-                  placeholder='Выберите категорию'
-                  showArrow='true'
-                  emptyRecordMsg='Таких категорий нет'
+                  showCheckbox="true"
+                  hidePlaceholder="true"
+                  placeholder="Выберите категорию"
+                  showArrow="true"
+                  emptyRecordMsg="Таких категорий нет"
+                  onBlur={onCategoryBlur}
                 />
               );
             }}
           />
-          {errors?.selectfieldcategory && (
-            <span className='popup__error' type='text'>
-              {errors?.selectfieldcategory?.message}
-            </span>
-          )}
+          <span className="popup__error" type="text">
+            {errors?.category?.message}
+          </span>
         </fieldset>
-        </PopupWithForm>
-      );
+      </PopupWithForm>
+    );
 }
 
 export default PopupCreateNewAudience;

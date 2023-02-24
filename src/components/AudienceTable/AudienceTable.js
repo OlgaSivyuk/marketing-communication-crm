@@ -16,13 +16,11 @@ function AudienceTable({
     return {
       id: audience.id,
       name: audience.name,
-      date: moment().format('DD.MM.YYYY'), // дата должна подтягиваться откуда-то
-      date_of_update: moment().format('DD.MM.YYYY'), // дата должна подтягиваться откуда-то
-      value: '1000', // велью должно подтягиваться откуда-то
-      deep: audience.deep,
+      date: moment().format('DD.MM.YYYY'),
+      value: '1000', // велью может подтягиваться из просчета аудитории,  пока дефолтное значение
       categorys: audience.categorys,
     };
-  });
+  }).reverse();
 
   const columns = useMemo(() => COLUMNS, []);
   const data = useMemo(() => audienceData, [audiences]);
@@ -48,7 +46,6 @@ function AudienceTable({
   );
 
   const { pageIndex } = state;
-  // console.log ('table', nextPage);
 
   return (
     <section className='table'>

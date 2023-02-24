@@ -8,26 +8,21 @@ export const COLUMNS = [
         accessor: 'date',
     },
     {
-        Header: 'Дата обновления',
-        accessor: 'date_of_update',
-    },
-    {
         Header: 'Название',
         accessor: 'name',
     },
     {
-        Header: 'Количество',
+        Header: 'Количество контактов',
         accessor: 'value',
-    },
-    {
-        Header: 'Глубина',
-        accessor: 'deep',
     },
     {
         Header: 'Категория',
         accessor: ({categorys}) => {
-            if (categorys !== undefined) {
-                return categorys.reduce((accumulator, currentValue) => accumulator+currentValue.category+' ' ,'')
+            if (categorys !== undefined && categorys.length > 0) {
+                return categorys.reduce((accumulator, currentValue, index) => {
+                    let separator = index === categorys.length - 1 ? '' : ', ';
+                    return accumulator + currentValue.category + separator;
+                },'');
             } else {
                 return ''
             }
