@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/marketing-communication-crm/static/css/main.28d07fe1.css",
-    "main.js": "/marketing-communication-crm/static/js/main.e6cae4e5.js",
+    "main.js": "/marketing-communication-crm/static/js/main.b5d2f327.js",
     "static/js/787.03993c5d.chunk.js": "/marketing-communication-crm/static/js/787.03993c5d.chunk.js",
     "static/media/MuseoSansCyrl_700-webfont.woff?v=3.19": "/marketing-communication-crm/static/media/MuseoSansCyrl_700-webfont.0ee181d09bac591a4444.woff",
     "static/media/museosanscyrl_500-webfont.woff?v=3.19": "/marketing-communication-crm/static/media/museosanscyrl_500-webfont.350d5a70f4c78bb61d07.woff",
@@ -32,11 +32,11 @@
     "static/media/prev-month-org.svg": "/marketing-communication-crm/static/media/prev-month-org.d5309fd2a7638d8c0a68.svg",
     "static/media/next-month-icon.svg": "/marketing-communication-crm/static/media/next-month-icon.9045601f1edcd6e86ace.svg",
     "main.28d07fe1.css.map": "/marketing-communication-crm/static/css/main.28d07fe1.css.map",
-    "main.e6cae4e5.js.map": "/marketing-communication-crm/static/js/main.e6cae4e5.js.map",
+    "main.b5d2f327.js.map": "/marketing-communication-crm/static/js/main.b5d2f327.js.map",
     "787.03993c5d.chunk.js.map": "/marketing-communication-crm/static/js/787.03993c5d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.28d07fe1.css",
-    "static/js/main.e6cae4e5.js"
+    "static/js/main.b5d2f327.js"
   ]
 }
