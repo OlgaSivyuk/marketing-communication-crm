@@ -8,7 +8,7 @@ function SendsCanalButton ({ testClick, eventId, phone }) {
               className='tableau__button tableau__button_type-test'
               onClick={() => testClick(eventId, phone)}
             >
-              Тестировать
+              Test
             </button>
       </>
     );

@@ -6,7 +6,7 @@ function SendsCurrentDate({ event, onChangeTime }) {
       <div className='tableau__cell-wrapper send-date '>
         <div className='tableau__cell_send-date'>
           <fieldset className='tableau__cell-fields fields_type-changeble'>
-            <label className='tableau__input-title'>Дата и Время</label>
+            <label className='tableau__input-title'>Date and Time</label>
             <input
               className='tableau__cell-input input_type-date'
               type='datetime-local'

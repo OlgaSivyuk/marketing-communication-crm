@@ -15,12 +15,12 @@ function SendsCanalInfoAnd ({
         <h2 className='tableau__cell-title'>Android Push</h2>
         <fieldset className='tableau__cell-fields'>
           <label className='tableau__input-title'>
-            Предварительный объем
+            Preliminary Volume
           </label>
           <p className='tableau__cell-text'>{event.value}</p>
         </fieldset>
         <fieldset className='tableau__cell-fields'>
-          <label className='tableau__input-title'>Финальный объем</label>
+          <label className='tableau__input-title'>Final Volume</label>
           <p className='tableau__cell-text'>{event.finalValue}</p>
         </fieldset>
         <fieldset className='tableau__cell-fields fields_type-changeble'>
@@ -39,13 +39,13 @@ function SendsCanalInfoAnd ({
           ></input>
         </fieldset>
         <fieldset className='tableau__cell-fields fields_type-changeble'>
-          <label className='tableau__input-title'>Текст для Deeplink</label>
+          <label className='tableau__input-title'>Deeplink Text</label>
           <input
             className='tableau__cell-input'
             type='text'
             id='text-deeplink'
             name='text-deeplink'
-            placeholder='Текст для Deeplink'
+            placeholder='Deeplink Text'
             value={event.textAndroid}
             onChange={(e) => changeEventHandler(e.target.value, 'textAndroid')}
             required

@@ -68,10 +68,10 @@ function onCategoryBlur() {
     return (
       <PopupWithForm
         name="new-audience"
-        title="Добавить аудиторию"
+        title="Add Audience"
         id="new-audience"
         formName="new-audience"
-        buttonTextConfirm="Добавить аудиторию"
+        buttonTextConfirm="Add Audience"
         onSubmit={handleSubmit(onSubmit)}
         isOpen={isOpen}
         onClose={onClose}
@@ -82,9 +82,9 @@ function onCategoryBlur() {
           <label className="popup__form-title"></label>
           <input
             {...register("name", {
-              required: "Поле не может быть пустым",
+              required: "This field cannot be empty",
             })}
-            placeholder="Название аудитории"
+            placeholder="Audience Name"
             className={`popup__form-input ${
               errors?.name ? "popup__form-input_error" : ""
             }`}
@@ -106,7 +106,7 @@ function onCategoryBlur() {
           <Controller
             name="category"
             control={control}
-            rules={{ required: "Поле не может быть пустым" }}
+            rules={{ required: "This field cannot be empty" }}
             errors={errors.category}
             render={({ field: { ref, ...field } }) => {
               return (
@@ -120,9 +120,9 @@ function onCategoryBlur() {
                   options={options}
                   showCheckbox="true"
                   hidePlaceholder="true"
-                  placeholder="Выберите категорию"
+                  placeholder="Select Category"
                   showArrow="true"
-                  emptyRecordMsg="Таких категорий нет"
+                  emptyRecordMsg="There is no such category"
                   onBlur={onCategoryBlur}
                 />
               );

@@ -19,7 +19,11 @@ export const dataCanals = [
 ];
 
 export const dataCategory = [
-  { category: 'Категория 1', id: 1 },
-  { category: 'Категория 2', id: 2 },
-  { category: 'Категория 3', id: 3 },
+  { category: 'Gamers', id: 1 },
+  { category: 'Shopers', id: 2 },
+  { category: 'Music lovers', id: 3 },
+  { category: 'Pet owners', id: 4 },
+  { category: 'Tech enthusiasts', id: 5 },
+  { category: 'Parents', id: 6 },
+  { category: 'Travelers', id: 7 },
 ];

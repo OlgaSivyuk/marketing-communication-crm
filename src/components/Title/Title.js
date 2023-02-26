@@ -9,7 +9,6 @@ function Title({
   showCurrentMonth,
   showNextMonth,
   openAddNewSendsForm,
-
   openAddNewAudienceForm,
   previousPage, 
   canPreviousPage, 
@@ -28,7 +27,7 @@ function Title({
       {/* для календаря */}
       {location.pathname === '/calender' && (
         <>
-          <h1 className='title__title'>Рассылки</h1>
+          <h1 className='title__title'>Campaign</h1>
           <div className='title__tools'>
             <div className='title__slider'>
               <button
@@ -44,7 +43,7 @@ function Title({
                 aria-label='текущий месяц'
                 onClick={showCurrentMonth}
               >
-                {today.locale('ru').format('MMMM')} {today.format('YYYY')}
+                {today.locale('en').format('MMMM')} {today.format('YYYY')}
               </button>
 
               <button
@@ -55,17 +54,17 @@ function Title({
               ></button>
             </div>
 
-            <button className='title__button' type='button' onClick={() => openAddNewSendsForm('Добавить рассылку', null, today)}>
-              Добавить рассылку
+            <button className='title__button' type='button' onClick={() => openAddNewSendsForm('Add Campaign', null, today)}>
+            Add Campaign
             </button>
           </div>
         </>
       )}
 
-      {/* редактирование аудитории */}
+      {/* редактирование Audiences */}
       {location.pathname === '/audience' && (
         <>
-          <h1 className='title__title'>Аудитории</h1>
+          <h1 className='title__title'>Audience</h1>
         <div className='title__tools'>
           <div className='title__slider'>
             <button
@@ -83,7 +82,7 @@ function Title({
             >
               {' '}
               <strong>
-                {pageIndex + 1} из {pageOptions.length}
+                {pageIndex + 1} of {pageOptions.length}
               </strong>{' '}
               {/* <span className='title__img'></span> */}
             </button>
@@ -101,7 +100,7 @@ function Title({
             className='title__button'
             type='button'
             onClick={()=> openAddNewAudienceForm(null, today)}>
-            Добавить аудиторию
+            Add Audience
           </button>
         </div>
         </>
@@ -110,17 +109,10 @@ function Title({
       {/* редактирование рассылок */}
       {location.pathname === '/sends' && (
         <>
-          <h1 className='title__title'>Редактирование рассылки</h1>
+          <h1 className='title__title'>Editing Campaign</h1>
           < DownloadReportCurrent 
           event={event}
           />
-        </>
-      )}
-
-      {/* для настройки каналов */}
-      {location.pathname === '/settings' && (
-        <>
-          <h1 className='title__title'>Настройка поведения каналов</h1>
         </>
       )}
     </section>

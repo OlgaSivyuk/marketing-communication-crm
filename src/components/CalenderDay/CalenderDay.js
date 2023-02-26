@@ -34,7 +34,7 @@ function CalenderDay({
       <div
         className='callender__cell-row current-day'
         onDoubleClick={() =>
-          openAddNewSendsForm('Добавить рассылку', null, dayItem)
+          openAddNewSendsForm('Add Campaign', null, dayItem)
         }
       >
         <div

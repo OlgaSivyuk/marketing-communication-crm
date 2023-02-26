@@ -21,7 +21,7 @@ function SendsEditingTableau({
   onChangeDate,
   onChangeTime,
 }) {
-  const [actionButton, setActionButton] = useState('Отправить рассылку');
+  const [actionButton, setActionButton] = useState('Send Campaign ');
   const [eventId] = useState(event.id);
   const [eventDate] = useState(
     moment.unix(+event.date).format('YYYY-MM-DD HH:mm')
@@ -30,7 +30,7 @@ function SendsEditingTableau({
   function actionWithSends(actionName) {
     setActionButton(actionName);
 
-    if (actionButton === 'Отправить рассылку') {
+    if (actionButton === 'Send Campaign ') {
       return Api.sendSend(eventId, eventDate).then((res) => {
         console.log('рассылка отправлена', res);
       });
@@ -78,7 +78,7 @@ function SendsEditingTableau({
               {method}
             </button>
 
-            {actionButton === 'Отправить рассылку' ? (
+            {actionButton === 'Send Campaign ' ? (
               <button
                 className='tableau__button'
                 onClick={() => actionWithSends('Остановить')}
@@ -88,7 +88,7 @@ function SendsEditingTableau({
             ) : (
               <button
                 className='tableau__button'
-                onClick={() => actionWithSends('Отправить рассылку')}
+                onClick={() => actionWithSends('Send Campaign ')}
               >
                 {actionButton}
               </button>
@@ -99,7 +99,7 @@ function SendsEditingTableau({
               onClick={deletSends}
             >
               <span className='button__img button__img-delete'></span>
-              Удалить
+              Delete
             </button>
           </div>
         </div>

@@ -2,9 +2,8 @@ import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
 import logo from '../../images/logo.svg';
-import DownloadReportPeriod from '../DownloadReportPeriod/DownloadReportPeriod';
 
-function Header({ getReportClick }) {
+function Header() {
     return (
       <header className={'header'}>
         <Link className='header__logo' to='/'>
@@ -14,23 +13,15 @@ function Header({ getReportClick }) {
           <li className='header__navigation-link'>
           <NavLink to='/calender' className='header__button-link'>
             <span className=' header__img header__img-sends'></span>
-            Рассылки
+            Campaign
           </NavLink>
           </li>
           <li className='header__navigation-link'>
           <NavLink to='/audience' className='header__button-link'>
             <span className=' header__img header__img-audience'></span>
-            Аудитории
+            Audience
           </NavLink>
           </li>
-          <li className='header__navigation-link'>
-          <NavLink to='/settings' className='header__button-link'>
-            <span className='header__img header__img-settings'></span>
-            Настройки
-          </NavLink>
-          </li>
-          <DownloadReportPeriod
-          getReportClick={getReportClick} />
         </ul>
       </header>
     );

@@ -15,12 +15,12 @@ function SendsCanalInfoEmail ({
           <h2 className='tableau__cell-title'>Email</h2>
           <fieldset className='tableau__cell-fields'>
             <label className='tableau__input-title'>
-              Предварительный объем
+              Preliminary Volume
             </label>
             <p className='tableau__cell-text'>{event.value}</p>
           </fieldset>
           <fieldset className='tableau__cell-fields'>
-            <label className='tableau__input-title'>Финальный объем</label>
+            <label className='tableau__input-title'>Final Volume</label>
             <p className='tableau__cell-text'>{event.finalValue}</p>
           </fieldset>
           <fieldset className='tableau__cell-fields fields_type-changeble'>
@@ -37,13 +37,13 @@ function SendsCanalInfoEmail ({
             ></input>
           </fieldset>
           <fieldset className='tableau__cell-fields fields_type-changeble'>
-            <label className='tableau__input-title'>Заголовок</label>
+            <label className='tableau__input-title'>Title</label>
             <input
               className='tableau__cell-input'
               type='text'
               id='text-title'
               name='text-title'
-              placeholder='Заголовок'
+              placeholder='Title'
               value={event.textEmail}
               onChange={(e) => changeEventHandler(e.target.value, 'textEmail')}
               required

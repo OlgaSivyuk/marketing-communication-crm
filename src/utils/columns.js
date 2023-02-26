@@ -4,19 +4,19 @@ export const COLUMNS = [
         accessor: 'id',
     },
     {
-        Header: 'Дата создания',
+        Header: 'Creation Date',
         accessor: 'date',
     },
     {
-        Header: 'Название',
+        Header: 'Audience Name',
         accessor: 'name',
     },
     {
-        Header: 'Количество контактов',
+        Header: 'Quantity',
         accessor: 'value',
     },
     {
-        Header: 'Категория',
+        Header: 'Category',
         accessor: ({categorys}) => {
             if (categorys !== undefined && categorys.length > 0) {
                 return categorys.reduce((accumulator, currentValue, index) => {
@@ -32,17 +32,17 @@ export const COLUMNS = [
 
 export const COLUMNS_STATUS = [
     {
-        Header: 'Cтатус',
+        Header: 'Status',
         accessor: 'status',
     },
     {
-        Header: 'Дата',
+        Header: 'Date and Time',
         accessor: 'status_date',
     },
-    {
-        Header: 'Время',
-        accessor: 'status_time',
-    },
+    // {
+    //     Header: 'Time',
+    //     accessor: 'status_time',
+    // },
 ]
 
 

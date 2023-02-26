@@ -24,11 +24,11 @@ function PopupTestingSendEmail ({ isOpen, onClose, sendTestMessage, changePhoneH
     return (
         <PopupWithForm
           name='test-send'
-          title='Тестирование рассылки'
-          subtitle='Контент берется из основного окна. После внесения изменений, необходимо сохранить изменения перед тестированием, т.к. данные берутся из БД.'
+          title='Campaign Testing'
+          subtitle='Контент берется из основного окна. После внесения изменений, необходимо Save Changes перед тестированием, т.к. данные берутся из БД.'
           id='form-test-send'
           formName='test-send'
-          buttonTextConfirm='Тестировать рассылку'
+          buttonTextConfirm='Test'
           onSubmit={handleSubmit(onSubmit)}
           isOpen={isOpen}
           onClose={onClose}

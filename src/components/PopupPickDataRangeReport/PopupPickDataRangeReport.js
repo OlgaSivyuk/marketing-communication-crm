@@ -40,7 +40,7 @@ function PopupPickDataRangeReport ({ isOpen, onClose }){
           title='Отчет за период'
           id='report'
           formName='report'
-          buttonTextConfirm='Получить отчет'
+          buttonTextConfirm='Get Report'
           onSubmit={handleGetReport}
           isOpen={isOpen}
           onClose={onClose}

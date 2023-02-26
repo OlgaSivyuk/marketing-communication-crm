@@ -6,7 +6,6 @@ import Header from '../Header/Header';
 import CalenderGrid from '../CalenderGrid/CalenderGrid';
 import SendsEditingTableau from '../SendsEditingTableau/SendsEditingTableau';
 import AudienceTable from '../AudienceTable/AudienceTable';
-import Settings from '../Settings/Settings';
 import PopupCreateNewSend from '../PopupCreateNewSend/PopupCreateNewSend';
 import PopupTestingSendPhone from '../PopupTestingSendPhone/PopupTestingSendPhone';
 import PopupTestingSendEmail from '../PopupTestingSendEmail/PopupTestingSendEmail';
@@ -28,8 +27,8 @@ function App() {
   const location = useLocation();
 
   window.moment = moment;
-  moment.locale('ru');
-  moment.updateLocale('ru', { week: { dow: 1 } });
+  moment.locale('en-US');
+  moment.updateLocale('en-US', { week: { dow: 0 } });
   const [today, setToday] = useState(moment());
   const startDay = today.clone().startOf('month').startOf('week');
   const startDateQuery = startDay.clone().format('X');
@@ -92,18 +91,12 @@ function App() {
         setAudiences(res);
       });
 
-    fetch(`${BASE_URL}/settings`)
-      .then((res) => res.json())
-      .then((res) => {
-        // console.log('settings data', res);
-        setSetings(res);
-      });
-
     fetch(`${BASE_URL}/report`)
       .then((res) => res.json());
 
-    fetch(`${BASE_URL}/currentreport`)
-      .then((res) => res.json());
+    // fetch(`${BASE_URL}/currentreport`)
+    //   .then((res) => res.json());
+
   }, [today, location.pathname, navigate]);
 
   // ================= календарь - даты ==================
@@ -137,7 +130,7 @@ function App() {
     setMethod(methodName);
   };
 
-  // добавление новой аудитории
+  // добавление новой Audiences
   function openAddNewAudienceForm(audienceForCreate, dayItem) {
     setIsCreateNewAudiencePopupOpen(true);
     setAudience(
@@ -145,9 +138,9 @@ function App() {
     );
   };
 
-  // тестирование рассылки push
+  // Campaign Testing push
   function openPushTestForm(eventId, contactForCreate) {
-    console.log('тестировать push', eventId);
+    console.log('Test push', eventId);
     setPushIsTestingSendPopupOpen(true);
     setEvent(
       events.find((event) => {
@@ -157,9 +150,9 @@ function App() {
     setContact(contactForCreate);
   };
 
-  // тестирование рассылки push
+  // Campaign Testing push
   function openEmailTestForm(eventId, contactForCreate) {
-    console.log('тестировать email', eventId);
+    console.log('Test email', eventId);
     setEmailIsTestingSendPopupOpen(true);
     setEvent(
       events.find((event) => {
@@ -167,11 +160,6 @@ function App() {
       })
     );
     setContact(contactForCreate);
-  };
-
-  // подстановка данных рассылки
-  function setSettingsData(settingForUpdate) {
-    setSeting(settingForUpdate);
   };
 
   // ================= логика изменения данных в модалках ==================
@@ -183,7 +171,9 @@ function App() {
     }));
   };
 
-  // поле дата и время
+  // поле Date and Time
+  //const date = moment(value).format('YYYY-MM-DDTHH:mm');
+  //console.log(date);
   function onChangeTime(time) {
     console.log('datetime', moment(time));
     setEvent((prevState) => ({
@@ -192,7 +182,7 @@ function App() {
     }));
   };
 
-  // мультивыбор аудитории
+  // мультивыбор Audiences
   function onChangeAudience(selectedItems) {
     console.log('selected audience', selectedItems);
     setEvent((prevState) => ({
@@ -232,15 +222,6 @@ function App() {
   function changePhoneHandler(text, field) {
     console.log('телефон или имейл', text);
     setContact((prevState) => ({
-      ...prevState,
-      [field]: text,
-    }));
-  };
-
-  //настройки
-  function changeSettings(text, field) {
-    console.log('field', text);
-    setSeting((prevState) => ({
       ...prevState,
       [field]: text,
     }));
@@ -292,7 +273,7 @@ function App() {
   };
 
   function handleRemoveEvent() {
-    console.log('удалить ивент', event);
+    console.log('Delete ивент', event);
     return Api.deleteEvent(event).then((res) => {
       console.log('res event', res);
       setEvents((prevState) =>
@@ -303,7 +284,7 @@ function App() {
     });
   };
 
-  // =================  аудитории работа с беком ==================
+  // =================  Audiences работа с беком ==================
   function createAudience() {
     console.log('создать аудиторию');
     return Api.createAudience(audience)
@@ -317,7 +298,7 @@ function App() {
   };
 
   function removeAudience() {
-    console.log('удалить', audience);
+    console.log('Delete', audience);
     return Api.deleteAudience(audience).then((res) => {
       console.log('res audience', res);
       setAudiences((prevState) =>
@@ -327,7 +308,7 @@ function App() {
     });
   };
 
-  // =================  тестирование рассылки ==================
+  // =================  Campaign Testing ==================
   function sendTestMessage() {
     Api.sendTest(event, contact).then((res) => {
       console.log('тестовое сообщение', res);
@@ -339,11 +320,11 @@ function App() {
   // =================  дополнительные действия ==================
   function deleteClick() {
     setIsDeleteConfirmPopupOpen(true);
-    console.log('удалить');
+    console.log('Delete');
   };
 
   function deleteAudienceClick(audienceId) {
-    console.log('удалить', audienceId);
+    console.log('Delete', audienceId);
     setIsDeleteConfirmPopupOpen(true);
     setAudience(
       audiences.find((audience) => {
@@ -356,15 +337,6 @@ function App() {
     setIsPickDataRangeReportPopupOpen(true);
   };
 
-  function changeSettingsClick(settingId) {
-    console.log('setting', settingId);
-    setIsChangeSettingsPopupOpen(true);
-    setSeting(
-      settings.find((setting) => {
-        return settingId === setting.id;
-      })
-    );
-  };
 
   function closeAllPopups() {
     setIsDeleteConfirmPopupOpen(false);
@@ -423,19 +395,6 @@ function App() {
             />
           }
         />
-        <Route
-          path='/settings'
-          element={
-            <Settings
-              handleUpdateSettings={handleUpdateSettings}
-              changeSettings={changeSettings}
-              settings={settings}
-              // checkSettingId={checkSettingId}
-              setSettingsData={setSettingsData}
-              changeSettingsClick={changeSettingsClick}
-            />
-          }
-        />
       </Routes>
 
       {/* Модалка удаления карточки */}
@@ -484,7 +443,7 @@ function App() {
         isOpen={isPickDataRangeReportPopupOpen}
         onClose={closeAllPopups}
       />
-      {/* Модалка создания аудитории */}
+      {/* Модалка создания Audiences */}
       <PopupCreateNewAudience
         isOpen={isCreateNewAudiencePopupOpen}
         onClose={closeAllPopups}
@@ -497,27 +456,3 @@ function App() {
 }
 
 export default App;
-
-
-
-//============== кусочек из изменения настроек
-    // Api.getSettings()
-    // .then((res) => {
-    //   console.log('res', res)
-    //   const mappedSettings = res.map((resSetting) => {
-    //     return {
-    //     policy: resSetting.policy,
-    //     timeStart: resSetting.timeStart,
-    //     timeEnd: resSetting.timeEnd,
-    //     id: resSetting.id,
-    //     canalName: resSetting.canalName
-    //     }
-    //   });
-    //   setSeting(mappedSettings)
-    //   console.log('mappedSettings', setting)
-
-      // setSeting(mappedSettings.find((setting) => {
-      //   return settingId === setting.id
-      // }));
-      // console.log('setting', setting.id)
-    // })

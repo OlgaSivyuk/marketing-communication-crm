@@ -12,7 +12,7 @@ function CalenderWeekDaysHeader() {
              >
               <div className='callender__cell_day-name'>
                 {moment()
-                  .day(i + 1)
+                  .day(i)
                   .format('ddd')}
               </div>
             </div>

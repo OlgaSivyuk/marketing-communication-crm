@@ -10,7 +10,7 @@ function CalendarEventsList ({ event, openEditSendsForm }) {
           <button
             className='callender__event'
             onDoubleClick={() =>
-              openEditSendsForm('Сохранить изменения', event)
+              openEditSendsForm('Save Changes', event)
             }
           >
             {moment.unix(+event.date).format('HH:mm')} {event.name}

@@ -13,7 +13,7 @@ function CalendarEventListButton ({ isListCell, showShortList, showFullList }){
               className='callender__event callender__event_more'
               onClick={showFullList}
             >
-              Еще
+              More
             </button>
           ) : null}
 
@@ -22,7 +22,7 @@ function CalendarEventListButton ({ isListCell, showShortList, showFullList }){
               className='callender__event callender__event_more'
               onClick={showShortList}
             >
-              Свернуть
+              Collapse
             </button>
           ) : null}
         </li>

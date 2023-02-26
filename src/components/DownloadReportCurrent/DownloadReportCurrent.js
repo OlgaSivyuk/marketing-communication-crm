@@ -25,7 +25,7 @@ function DownloadReportCurrent({ event }) {
               type='button'
               onClick={handleGetReport}
             >
-              Получить отчет
+              Get Report
             </button>
         </div>
     );
