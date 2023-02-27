@@ -52,7 +52,7 @@ function App() {
     value: '',
   };
   const [events, setEvents] = useState([]);
-  const [event, setEvent] = useState(null); // event переменная для обновления
+  const [event, setEvent] = useState(null);
   const [method, setMethod] = useState(null);
 
   const defaultAudience = {
@@ -73,7 +73,7 @@ function App() {
   const [setting, setSeting] = useState(null);
 
   useEffect(() => {
-    if (location.pathname === '/') {
+    if (location.pathname === '/' || location.pathname === '/marketing-communication-crm') {
       navigate('/calender');
     };
 
@@ -93,9 +93,6 @@ function App() {
 
     fetch(`${BASE_URL}/report`)
       .then((res) => res.json());
-
-    // fetch(`${BASE_URL}/currentreport`)
-    //   .then((res) => res.json());
 
   }, [today, location.pathname, navigate]);
 
@@ -172,8 +169,6 @@ function App() {
   };
 
   // поле Date and Time
-  //const date = moment(value).format('YYYY-MM-DDTHH:mm');
-  //console.log(date);
   function onChangeTime(time) {
     console.log('datetime', moment(time));
     setEvent((prevState) => ({
