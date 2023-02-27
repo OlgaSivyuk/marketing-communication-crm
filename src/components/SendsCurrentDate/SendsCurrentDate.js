@@ -1,7 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import moment from 'moment';
 
 function SendsCurrentDate({ event, onChangeTime }) {
+
+  const [date, setDate] = useState(moment.unix(event.date).format('YYYY-MM-DD HH:mm'));
+  console.log("event", event);
+  
+  const handleChange = (e) => {
+    const newDate = e.target.value;
+    setDate(newDate);
+    onChangeTime(moment(newDate).unix() * 1000);
+  };
+
     return (
       <div className='tableau__cell-wrapper send-date '>
         <div className='tableau__cell_send-date'>
@@ -12,9 +22,11 @@ function SendsCurrentDate({ event, onChangeTime }) {
               type='datetime-local'
               id='date'
               name='date'
-              value={moment.unix(+event.date).format('YYYY-MM-DD HH:mm')}
+              value={date}
               required
-              onChange={(e) => onChangeTime(e.target.value)}
+              onChange={handleChange}
+              // value={moment.unix(+event.date).format('YYYY-MM-DD HH:mm')}
+              // onChange={(e) => onChangeTime(e.target.value)}
             ></input>
           </fieldset>
         </div>

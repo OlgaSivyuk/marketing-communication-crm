@@ -25,7 +25,7 @@ function PopupTestingSendPhone ({ isOpen, onClose, sendTestMessage, changePhoneH
         <PopupWithForm
           name='test-send'
           title='Campaign Testing'
-          subtitle='Контент берется из основного окна. После внесения изменений, необходимо Save Changes перед тестированием, т.к. данные берутся из БД.'
+          subtitle='Save all recent changes before testing.'
           id='form-test-send'
           formName='test-send'
           buttonTextConfirm='Test'
@@ -34,10 +34,10 @@ function PopupTestingSendPhone ({ isOpen, onClose, sendTestMessage, changePhoneH
           onClose={onClose}
         >
           <fieldset className='popup__form-fields'>
-            <label className='popup__form-title'>Номер телефона</label>
+            <label className='popup__form-title'>Phone Number</label>
             <input
             {...register('phone', {
-              required: 'Поле «Телефон» не может быть пустым',
+              required: 'This field cannot be empty',
               pattern: {
                 value: /^((\+7|7|8)+([0-9]){10})$/,
                 message: 'Введите данные в формате +7900000000',

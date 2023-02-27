@@ -7,8 +7,11 @@ function PopupDeleteCardConfirm({
   onClose,
   confirmEventDelete,
   confirmAudienceDelete,
+  event
 }) {
 
+
+  console.log('event popup', event)
   const location = useLocation();
 
   function handleSubmitEvent(event) {
@@ -25,15 +28,15 @@ function PopupDeleteCardConfirm({
 
   return (
     <>
-      {location.pathname === '/sends' && (
+      {location.pathname === '/sends' && ( //`/sends/${event.id}`
         <PopupWithForm
           name='delete-card'
-          title='Точно Delete?'
-          subtitle='Востановить не получится'
+          title='Are you sure you want to delete it?'
+          subtitle='There is no way to restore it'
           id='form-delete-card'
           formName='delete-place-card'
           buttonTextConfirm='Delete'
-          buttonText='Отменить'
+          buttonText='Canсel'
           onSubmit={handleSubmitEvent}
           isOpen={isOpen}
           onClose={onClose}
@@ -43,12 +46,12 @@ function PopupDeleteCardConfirm({
       {location.pathname === '/audience' && (
         <PopupWithForm
           name='delete-card'
-          title='Точно Delete?'
-          subtitle='Востановить не получится'
+          title='Are you sure you want to delete it?'
+          subtitle='There is no way to restore it'
           id='form-delete-card'
           formName='delete-place-card'
           buttonTextConfirm='Delete'
-          buttonText='Отменить'
+          buttonText='Canсel'
           onSubmit={handleSubmitAudience}
           isOpen={isOpen}
           onClose={onClose}

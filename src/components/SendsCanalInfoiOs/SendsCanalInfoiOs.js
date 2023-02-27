@@ -16,11 +16,11 @@ function SendsCanalInfoiOs ({
             <label className='tableau__input-title'>
               Preliminary Volume
             </label>
-            <p className='tableau__cell-text'>{event.value}</p>
+            <p className='tableau__cell-text'>400</p>
           </fieldset>
           <fieldset className='tableau__cell-fields'>
             <label className='tableau__input-title'>Final Volume</label>
-            <p className='tableau__cell-text'>{event.finalValue}</p>
+            <p className='tableau__cell-text'>400</p>
           </fieldset>
           <fieldset className='tableau__cell-fields fields_type-changeble'>
             <label className='tableau__input-title'>Deeplink</label>
@@ -29,7 +29,7 @@ function SendsCanalInfoiOs ({
               type='text'
               id='deeplink'
               name='deeplink'
-              placeholder='Deeplink'
+              placeholder='Add Deeplink'
               value={event.deeplinkIos}
               onChange={(e) =>
                 changeEventHandler(e.target.value, 'deeplinkIos')
@@ -44,7 +44,7 @@ function SendsCanalInfoiOs ({
               type='text'
               id='text-deeplink'
               name='text-deeplink'
-              placeholder='Deeplink Text'
+              placeholder='Add Deeplink Text'
               value={event.textIos}
               onChange={(e) => changeEventHandler(e.target.value, 'textIos')}
               required

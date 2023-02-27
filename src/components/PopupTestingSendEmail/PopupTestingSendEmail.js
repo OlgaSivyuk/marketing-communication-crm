@@ -25,7 +25,7 @@ function PopupTestingSendEmail ({ isOpen, onClose, sendTestMessage, changePhoneH
         <PopupWithForm
           name='test-send'
           title='Campaign Testing'
-          subtitle='Контент берется из основного окна. После внесения изменений, необходимо Save Changes перед тестированием, т.к. данные берутся из БД.'
+          subtitle='Save all recent changes before testing.'
           id='form-test-send'
           formName='test-send'
           buttonTextConfirm='Test'
@@ -37,7 +37,7 @@ function PopupTestingSendEmail ({ isOpen, onClose, sendTestMessage, changePhoneH
             <label className='popup__form-title'>Email</label>
             <input
             {...register('email', {
-              required: 'Поле «Email» не может быть пустым',
+              required: 'This field cannot be empty',
               pattern: {
                 value: /^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$/,
                 message: 'Введите email в формате email@domen.com',

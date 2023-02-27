@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import './SendsEditingTableau.css';
 import Title from '../Title/Title';
 
@@ -8,6 +9,7 @@ import SendsCurrentDate from '../SendsCurrentDate/SendsCurrentDate';
 import * as Api from '../../utils/Api.js';
 import moment from 'moment';
 import SendsCanalBlock from '../SendsCanalBlock/SendsCanalBlock';
+import { BASE_URL }  from '../../utils/Api';
 
 
 function SendsEditingTableau({
@@ -20,17 +22,43 @@ function SendsEditingTableau({
   method,
   onChangeDate,
   onChangeTime,
+  events,
+  startDateQuery,
+  endDateQuery,
 }) {
-  const [actionButton, setActionButton] = useState('Send Campaign ');
+  const [actionButton, setActionButton] = useState('Send Campaign');
+  const [updatedData, setUpdatedData] = useState(null);
+  
   const [eventId] = useState(event.id);
   const [eventDate] = useState(
     moment.unix(+event.date).format('YYYY-MM-DD HH:mm')
   );
+  console.log("method", method)
+
+  const {id} = useParams();
+
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     const response = await fetch(`${BASE_URL}/events?date_gte=${startDateQuery}&date_lte=${endDateQuery}`);
+  //     const data = await response.json();
+  //     const currentEvent = data.find((item) => item.id === Number(id));
+  //     // const updatedEventData = { ...currentEvent, date: moment(currentEvent.date).unix() };
+  //     setUpdatedData(currentEvent);
+  //     console.log('currentEvent', currentEvent);
+  //     console.log('data', data);
+  //   }
+  //   fetchData();
+  
+  // }, [id, startDateQuery, endDateQuery]);
+  
+  // if (!updatedData) {
+  //   return <div>Loading...</div>;
+  // }
 
   function actionWithSends(actionName) {
     setActionButton(actionName);
 
-    if (actionButton === 'Send Campaign ') {
+    if (actionButton === 'Send Campaign') {
       return Api.sendSend(eventId, eventDate).then((res) => {
         console.log('рассылка отправлена', res);
       });
@@ -60,6 +88,7 @@ function SendsEditingTableau({
             key={canalItem}
             canalItem={canalItem}
             canalName={canalName.canal}
+            eventCanal={event.canal}
             event={event}
             eventId={eventId}
             changeEventHandler={changeEventHandler}
@@ -75,20 +104,20 @@ function SendsEditingTableau({
               onClick={handleUpdateSend}
             >
               <span className='button__img button__img-edit'></span>
-              {method}
+              Save Changes
             </button>
 
-            {actionButton === 'Send Campaign ' ? (
+            {actionButton === 'Send Campaign' ? (
               <button
                 className='tableau__button'
-                onClick={() => actionWithSends('Остановить')}
+                onClick={() => actionWithSends('Stop Campaign')}
               >
                 {actionButton}
               </button>
             ) : (
               <button
                 className='tableau__button'
-                onClick={() => actionWithSends('Send Campaign ')}
+                onClick={() => actionWithSends('Send Campaign')}
               >
                 {actionButton}
               </button>

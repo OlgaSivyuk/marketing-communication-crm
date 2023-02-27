@@ -121,7 +121,8 @@ function App() {
     setMethod(methodName);
   };
 
-  function openEditSendsForm(methodName, eventForUpdate) {
+  function openEditSendsForm(methodName, eventForUpdate) { //methodName,
+    // navigate(`/sends/${eventForUpdate.id}`);
     navigate('/sends');
     setEvent(eventForUpdate);
     setMethod(methodName);
@@ -169,11 +170,11 @@ function App() {
   };
 
   // поле Date and Time
-  function onChangeTime(time) {
-    console.log('datetime', moment(time));
+  function onChangeTime(date) {
+    console.log('datetime', moment(date));
     setEvent((prevState) => ({
       ...prevState,
-      date: moment(time).format('X'),
+      date: moment(date).format('X'),
     }));
   };
 
@@ -313,9 +314,9 @@ function App() {
   };
 
   // =================  дополнительные действия ==================
-  function deleteClick() {
+  function deleteClick(eventId) {
     setIsDeleteConfirmPopupOpen(true);
-    console.log('Delete');
+    console.log('Delete', eventId);
   };
 
   function deleteAudienceClick(audienceId) {
@@ -364,7 +365,7 @@ function App() {
           }
         />
         <Route
-          path='/sends'
+          path='/sends'  //path='/sends/:id'
           element={
             <SendsEditingTableau
               deletSends={deleteClick}
@@ -375,6 +376,14 @@ function App() {
               handleUpdateSend={handleUpdateSend}
               method={method}
               onChangeTime={onChangeTime}
+              events={events}
+              setEvents={setEvents}
+              startDateQuery={startDateQuery}
+              endDateQuery={endDateQuery}
+              setEvent={setEvent}
+              defaultEvent={defaultEvent}
+              navigate={navigate}
+              location={location} 
             />
           }
         />
@@ -399,6 +408,7 @@ function App() {
         confirmEventDelete={handleRemoveEvent}
         confirmAudienceDelete={removeAudience}
         audience={audience}
+        event={event}
       />
       {/* Модалка изменения настроек */}
       <PopupChangeConfirm
