@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState } from 'react';
 import './SendsEditingTableau.css';
 import Title from '../Title/Title';
 
@@ -9,8 +8,6 @@ import SendsCurrentDate from '../SendsCurrentDate/SendsCurrentDate';
 import * as Api from '../../utils/Api.js';
 import moment from 'moment';
 import SendsCanalBlock from '../SendsCanalBlock/SendsCanalBlock';
-import { BASE_URL }  from '../../utils/Api';
-
 
 function SendsEditingTableau({
   deletSends,
@@ -19,52 +16,24 @@ function SendsEditingTableau({
   event,
   changeEventHandler,
   handleUpdateSend,
-  method,
-  onChangeDate,
   onChangeTime,
-  events,
-  startDateQuery,
-  endDateQuery,
 }) {
   const [actionButton, setActionButton] = useState('Send Campaign');
-  const [updatedData, setUpdatedData] = useState(null);
-  
   const [eventId] = useState(event.id);
   const [eventDate] = useState(
     moment.unix(+event.date).format('YYYY-MM-DD HH:mm')
   );
-  console.log("method", method)
-
-  const {id} = useParams();
-
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     const response = await fetch(`${BASE_URL}/events?date_gte=${startDateQuery}&date_lte=${endDateQuery}`);
-  //     const data = await response.json();
-  //     const currentEvent = data.find((item) => item.id === Number(id));
-  //     // const updatedEventData = { ...currentEvent, date: moment(currentEvent.date).unix() };
-  //     setUpdatedData(currentEvent);
-  //     console.log('currentEvent', currentEvent);
-  //     console.log('data', data);
-  //   }
-  //   fetchData();
-  
-  // }, [id, startDateQuery, endDateQuery]);
-  
-  // if (!updatedData) {
-  //   return <div>Loading...</div>;
-  // }
 
   function actionWithSends(actionName) {
     setActionButton(actionName);
 
     if (actionButton === 'Send Campaign') {
       return Api.sendSend(eventId, eventDate).then((res) => {
-        console.log('рассылка отправлена', res);
+        console.log('Campaign sended', res);
       });
     } else {
       return Api.stopSend(eventId, eventDate).then((res) => {
-        console.log('рассылка оcтановлена', res);
+        console.log('Campaign stoped', res);
       });
     }
   }
@@ -77,7 +46,6 @@ function SendsEditingTableau({
 
         <SendsCurrentDate
           event={event}
-          onChangeDate={onChangeDate}
           onChangeTime={onChangeTime}
         />
 

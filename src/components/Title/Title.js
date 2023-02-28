@@ -24,7 +24,7 @@ function Title({
   return (
     <section className='title'>
 
-      {/* для календаря */}
+      {/* calender */}
       {location.pathname === '/calender' && (
         <>
           <h1 className='title__title'>Campaign</h1>
@@ -61,7 +61,7 @@ function Title({
         </>
       )}
 
-      {/* редактирование Audiences */}
+      {/* Audiences */}
       {location.pathname === '/audience' && (
         <>
           <h1 className='title__title'>Audience</h1>
@@ -106,7 +106,7 @@ function Title({
         </>
       )}
 
-      {/* редактирование рассылок */}
+      {/* Campaign */}
       {location.pathname === '/sends' && (
         <>
           <h1 className='title__title'>Editing Campaign</h1>

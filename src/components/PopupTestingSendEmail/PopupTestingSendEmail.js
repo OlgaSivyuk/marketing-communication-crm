@@ -40,7 +40,7 @@ function PopupTestingSendEmail ({ isOpen, onClose, sendTestMessage, changePhoneH
               required: 'This field cannot be empty',
               pattern: {
                 value: /^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$/,
-                message: 'Введите email в формате email@domen.com',
+                message: 'Enter email in the format email@domen.com',
               },
             })}
             className={`popup__form-input ${

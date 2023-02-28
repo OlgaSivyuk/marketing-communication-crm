@@ -36,13 +36,13 @@ export const COLUMNS_STATUS = [
         accessor: 'status',
     },
     {
-        Header: 'Date and Time',
+        Header: 'Date',
         accessor: 'status_date',
     },
-    // {
-    //     Header: 'Time',
-    //     accessor: 'status_time',
-    // },
+    {
+        Header: 'Time',
+        accessor: 'status_time',
+    },
 ]
 
 

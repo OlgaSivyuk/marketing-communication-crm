@@ -23,6 +23,7 @@ function PopupWithForm({
   const location = useLocation();
 
   function closePopup(){
+    console.log("закрыть")
     onClose();
   }
 
@@ -68,7 +69,7 @@ function PopupWithForm({
           <button
             type="button"
             className="popup__close-popup"
-            aria-label="Закрыть"
+            aria-label="Close"
             onClick={closePopup}
           ></button>
         )}
@@ -77,7 +78,7 @@ function PopupWithForm({
           <button
             type="button"
             className="popup__close-popup"
-            aria-label="Закрыть"
+            aria-label="Close"
             onClick={closePopupAudience}
           ></button>
         )}
@@ -86,7 +87,7 @@ function PopupWithForm({
           <button
             type="button"
             className="popup__close-popup"
-            aria-label="Закрыть"
+            aria-label="Close"
             onClick={closePopupCalender}
           ></button>
         )}

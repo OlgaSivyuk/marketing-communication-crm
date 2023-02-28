@@ -6,11 +6,8 @@ import './SendsStatusTableau.css';
 
 function SendsStatusTableau() {
 
-
-    const columns = useMemo(() => COLUMNS_STATUS, []);
-    const data = useMemo(() => DATA_STATUS, []);
-
-
+  const columns = useMemo(() => COLUMNS_STATUS, []);
+  const data = useMemo(() => DATA_STATUS, []);
   const {   
     getTableProps,
     getTableBodyProps,
@@ -21,7 +18,6 @@ function SendsStatusTableau() {
     columns,
     data
 }); 
-
 
     return (
       <div className="tableau__cell-wrapper send-status">

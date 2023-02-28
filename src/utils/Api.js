@@ -69,20 +69,6 @@ function checkResponse(res) {
       .then(checkResponse)
     };
 
-    export function createDataRangeReport (startDate, endDate) {
-      return fetch(`${BASE_URL}/report`, {
-
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-        credentials: 'include',
-        body: JSON.stringify({startDate, endDate})
-      })
-      .then(checkResponse)
-    };
-
     export function createCurrentReport (id, date) {
       return fetch(`${BASE_URL}/currentreport`, {
 
@@ -122,29 +108,6 @@ function checkResponse(res) {
         },
         credentials: 'include',
         body: JSON.stringify({id, date})
-      })
-      .then(checkResponse)
-    };
-
-    export function getSettings () {
-      return fetch(`${BASE_URL}/settings`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-      })
-      .then(checkResponse)
-    };
-
-    export function updateSettings(setting) {
-      console.log("set", setting)
-      return fetch(`${BASE_URL}/settings/${setting.id}`, {
-        method: 'PATCH',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        credentials: 'include',
-        body: JSON.stringify(setting)
       })
       .then(checkResponse)
     };

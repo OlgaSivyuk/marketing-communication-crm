@@ -11,23 +11,19 @@ function CalenderGrid({
   events,
   openAddNewSendsForm,
   openEditSendsForm,
-  event,
   showPreviousMonth,
   showCurrentMonth,
   showNextMonth,
-  addNewAudience
 }) {
   
   return (
     <section className='calendar'>
       <Title 
-      event={event}
       today={today}
       showPreviousMonth={showPreviousMonth}
       showCurrentMonth={showCurrentMonth}
       showNextMonth={showNextMonth}
       openAddNewSendsForm={openAddNewSendsForm}
-      addNewAudience={addNewAudience}
       />
 
       <CalendarMonthDaysList 

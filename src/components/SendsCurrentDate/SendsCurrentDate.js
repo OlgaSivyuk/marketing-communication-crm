@@ -4,8 +4,6 @@ import moment from 'moment';
 function SendsCurrentDate({ event, onChangeTime }) {
 
   const [date, setDate] = useState(moment.unix(event.date).format('YYYY-MM-DD HH:mm'));
-  console.log("event", event);
-  
   const handleChange = (e) => {
     const newDate = e.target.value;
     setDate(newDate);
@@ -25,8 +23,6 @@ function SendsCurrentDate({ event, onChangeTime }) {
               value={date}
               required
               onChange={handleChange}
-              // value={moment.unix(+event.date).format('YYYY-MM-DD HH:mm')}
-              // onChange={(e) => onChangeTime(e.target.value)}
             ></input>
           </fieldset>
         </div>

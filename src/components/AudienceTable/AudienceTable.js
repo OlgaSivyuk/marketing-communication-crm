@@ -17,7 +17,7 @@ function AudienceTable({
       id: audience.id,
       name: audience.name,
       date: moment().format('DD.MM.YYYY'),
-      value: '1000', // велью может подтягиваться из просчета Audiences,  пока дефолтное значение
+      value: '1000', // default value
       categorys: audience.categorys,
     };
   }).reverse();

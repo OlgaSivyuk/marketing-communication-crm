@@ -10,25 +10,21 @@ function PopupDeleteCardConfirm({
   event
 }) {
 
-
-  console.log('event popup', event)
   const location = useLocation();
 
   function handleSubmitEvent(event) {
-    console.log('Delete c попапа');
     event.preventDefault();
     confirmEventDelete();
   };
 
   function handleSubmitAudience(event) {
-    console.log('Delete c попапа аудиитория');
     event.preventDefault();
     confirmAudienceDelete();
   };
 
   return (
     <>
-      {location.pathname === '/sends' && ( //`/sends/${event.id}`
+      {location.pathname === '/sends' && (
         <PopupWithForm
           name='delete-card'
           title='Are you sure you want to delete it?'

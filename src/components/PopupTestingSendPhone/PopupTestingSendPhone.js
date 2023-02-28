@@ -40,7 +40,7 @@ function PopupTestingSendPhone ({ isOpen, onClose, sendTestMessage, changePhoneH
               required: 'This field cannot be empty',
               pattern: {
                 value: /^((\+7|7|8)+([0-9]){10})$/,
-                message: 'Введите данные в формате +7900000000',
+                message: 'Enter data in the format +7900000000',
               },
             })}
             className={`popup__form-input ${
