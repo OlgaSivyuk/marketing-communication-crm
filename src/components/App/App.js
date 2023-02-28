@@ -64,7 +64,7 @@ function App() {
   const [contact, setContact] = useState(null);
 
   useEffect(() => {
-    if (location.pathname === '/' || location.pathname === '/marketing-communication-crm') {
+    if (location.pathname === '/' || location.pathname === '/marketing-communication-crm/') {
       navigate('/calender');
     };
 
