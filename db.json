@@ -112,10 +112,21 @@
       ],
       "finalValue": "",
       "value": "",
-      "id": 2
+      "id": 2,
+      "deeplinkAndroid": "link1",
+      "deeplinkIos": "link2",
+      "linkEmail": "link3",
+      "textAndroid": "text1",
+      "textIos": "text2",
+      "textEmail": "text3"
     }
   ],
-  "currentreport": [],
+  "currentreport": [
+    {
+      "id": 2,
+      "date": "2023-02-28 18:35"
+    }
+  ],
   "send": [],
   "stop": [],
   "test": []

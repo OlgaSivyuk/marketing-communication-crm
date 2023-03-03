@@ -267,6 +267,7 @@ function App() {
     setIsDeleteConfirmPopupOpen(false);
     setIsCreateNewSendPopupOpen(false);
     setEmailIsTestingSendPopupOpen(false);
+    setPushIsTestingSendPopupOpen(false);
     setIsCreateNewAudiencePopupOpen(false);
   };
 
